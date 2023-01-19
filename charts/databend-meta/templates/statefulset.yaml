@@ -79,7 +79,7 @@ spec:
                       --raft-listen-host ${POD_IP} \
                       --raft-advertise-host ${POD_NAME}.{{ $fullName }}.${POD_NAMESPACE}.svc.cluster.local \
                       --config-id ${ID} \
-                      --join ${NAME}-0.{{ $fullName }}:28004
+                      --join ${NAME}-0.{{ $fullName }}.${POD_NAMESPACE}.svc.cluster.local:28004
                   ;;
                 esac
               else
